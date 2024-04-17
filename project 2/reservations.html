@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cb61c3d476.js" crossorigin="anonymous"></script>
+    <title>Reservations</title>
+</head>
+<body class="reservations">
+    <section>
+        <ul>
+            <li><a href="http://127.0.0.1:3000/index.html#home"><i class="fa-solid fa-house"> Home</i></a></li>
+            <li><a href="http://127.0.0.1:3000/menu.html"><i class="fa-regular fa-newspaper"> Menu</i></a></li>
+            <li><a href="http://127.0.0.1:3000/reservations.html"><i class="fa-regular fa-envelope"> Reservations</i></a></li>
+        </ul> 
+        </section>
+        <section>
+            <form action="reservation.php" method="post">
+            <div class="elem-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="visitor_name" placeholder="Hello Kitty" pattern=[A-Z\sa-z]{3,20} required>
+            </div>
+            <div class="elem-group">
+                <label for="email">Your E-mail</label>
+                <input type="email" id="email" name="visitor_email" placeholder="HelloKitty@email.com" required>
+            </div>
+            <div class="elem-group">
+                <label for="phone">Your Phone</label>
+                <input type="tel" id="phone" name="visitor_phone" placeholder="222-777-0000" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+            </div>
+                <hr>
+            <div class="elem-group inlined">
+                <label for="adult">Adults</label>
+                <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+            </div>
+            <div class="elem-group inlined">
+                <label for="child">Children</label>
+                <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+            </div>
+            <div class="elem-group inlined">
+                <label for="reservation-day">Reservation date</label>
+                <input type="date" id="reservation-day" name="reservation-date" required>
+            </div>
+            <div class="elem-group inlined">
+                <label for="reservation-time">Time</label>
+                <input type="time" id="reservation-time" name="time" required>
+            </div>
+            <div class="elem-group">
+                <label for="seating-selection">Select Preference</label>
+                <select id="seating-selection" name="room_preference" required>
+                    <option value="">Inside/Outside/Smoking</option>
+                    <option value="inside">Inside</option>
+                    <option value="outside">Outside</option>
+                    <option value="smoking">Smoking</option>
+                </select>
+            </div>
+                <hr>
+            <div class="elem-group">
+                <label for="message">Anything Else?
+                <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important. (Please include allergies)" cols="100" rows="5" required></textarea></label>
+                </div>
+                <br>
+                <button type="submit">Make reservation.</button>
+            </form>
+        </section>
+</body>
+<footer>
+    <p class="copyright">&copy; 2024 Christan Carstens. All rights reserved to Hello Kitty</p> 
+</footer>
+</html>
